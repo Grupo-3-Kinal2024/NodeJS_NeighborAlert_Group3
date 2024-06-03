@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "75e82fc6-f1c4-4a53-9295-a435fc58e47e",
+		"_postman_id": "184511d3-34b5-41c4-9bb9-554813322d33",
 		"name": "Neigborn",
 		"description": "**Project Overview - NeigbornAlert API**\n\n**Introduction**:  \nThis collection provides an overview of the _NeigbornAlert API_, which encompasses all entities and functionalities within the system. NeigbornAlert is a platform designed to facilitate communication and interaction among users within communities. The API supports user management, community creation, post management, comment interactions, and authentication processes.\n\n---\n\n**Best Practices for API Endpoint Design**:  \nIt's important to maintain clean and concise endpoint routes to enhance readability and maintainability of the API. Consider structuring your endpoints with a base route followed by the entity they operate on, like so:\n\n`baseRoute/entity`\n\nAvoid adding unnecessary actions or verbs to the endpoint paths, such as:\n\n`baseRoute/entity/updateEntity`\n\n`baseRoute/entity/createEntity`\n\n> These distinctions can often be handled by employing different HTTP methods (GET, POST, PUT, DELETE) to the same endpoint. Overloading the endpoint paths with additional descriptors can lead to unnecessary complexity and clutter. Keep it simple and focused on the core functionality of the endpoint. \n  \n\n---\n\n**Endpoints**:\n\n- **User**:\n    \n    - Create User: `POST /neighbor/v1/user`\n        \n    - Get Users: `GET /neighbor/v1/user`\n        \n    - Get User by ID: `GET /neighbor/v1/user/{userId}`\n        \n    - Update User: `PUT /neighbor/v1/user/{userId}`\n        \n    - Delete User: `DELETE /neighbor/v1/user/{userId}`\n        \n- **Community**:\n    \n    - Create Community: `POST /neighbor/v1/community`\n        \n    - Get Communities: `GET /neighbor/v1/community`\n        \n    - Get Community by ID: `GET /neighbor/v1/community/{communityId}`\n        \n    - Update Community: `PUT /neighbor/v1/community/{communityId}`\n        \n    - Delete Community: `DELETE /neighbor/v1/community/{communityId}`\n        \n- **Post**:\n    \n    - Create Post: `POST /neighbor/v1/post`\n        \n    - Get Posts: `GET /neighbor/v1/post`\n        \n    - Get Post by ID: `GET /neighbor/v1/post/{postId}`\n        \n    - Update Post: `PUT /neighbor/v1/post/{postId}`\n        \n    - Delete Post: `DELETE /neighbor/v1/post/{postId}`\n        \n- **Comment**:\n    \n    - Create Comment: `POST /neighbor/v1/comment`\n        \n    - Get Comments: `GET /neighbor/v1/comment`\n        \n    - Get Comment by ID: `GET /neighbor/v1/comment/{commentId}`\n        \n    - Update Comment: `PUT /neighbor/v1/comment/{commentId}`\n        \n    - Delete Comment: `DELETE /neighbor/v1/comment/{commentId}`",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
-		"_exporter_id": "32787281"
+		"_exporter_id": "32787339"
 	},
 	"item": [
 		{
@@ -208,26 +208,16 @@
 			"item": [
 				{
 					"name": "getPost",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [
 							{
 								"key": "token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjU3N2VjZmIxYTk0OGFjN2QyMTg5YWUiLCJlbWFpbCI6ImpvbkBhZG1pbi5vcmcuZ3QiLCJpYXQiOjE3MTczNDMyODYsImV4cCI6MTcxNzM1MDQ4Nn0.Hzja_pkZHbJdn8nuu0dTeL43swWXVRKlhtOtZQ50pzY"
-							}
-						],
-						"url": "http://localhost:3000/neighbor/v1/post/getPost"
-					},
-					"response": []
-				},
-				{
-					"name": "createPost",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjU3N2VjZmIxYTk0OGFjN2QyMTg5YWUiLCJlbWFpbCI6ImpvbkBhZG1pbi5vcmcuZ3QiLCJpYXQiOjE3MTczNDMyODYsImV4cCI6MTcxNzM1MDQ4Nn0.Hzja_pkZHbJdn8nuu0dTeL43swWXVRKlhtOtZQ50pzY"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjVjOTk1NzY1MmE1ZWM4ZmQ3ODAzNjkiLCJlbWFpbCI6Im1hdGVvQGFkbWluLm9yZy5ndCIsImlhdCI6MTcxNzQyNDc5MywiZXhwIjoxNzE3NDMxOTkzfQ.-I9dXZNqYebuuH05mvWg-uXxWDWZsKUh7ERcf3sgWMU",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -244,25 +234,26 @@
 					"response": []
 				},
 				{
-					"name": "updatePost",
+					"name": "createPost",
 					"request": {
-						"method": "PUT",
+						"method": "POST",
 						"header": [
 							{
 								"key": "token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjU3N2VjZmIxYTk0OGFjN2QyMTg5YWUiLCJlbWFpbCI6ImpvbkBhZG1pbi5vcmcuZ3QiLCJpYXQiOjE3MTcyNTg4MjksImV4cCI6MTcxNzI2NjAyOX0.-6rYQDEnFn1QvwkZ7aubQwIW6jzuqz0yc4nkmwl1AMk"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjVjOTk1NzY1MmE1ZWM4ZmQ3ODAzNjkiLCJlbWFpbCI6Im1hdGVvQGFkbWluLm9yZy5ndCIsImlhdCI6MTcxNzQyNDc5MywiZXhwIjoxNzE3NDMxOTkzfQ.-I9dXZNqYebuuH05mvWg-uXxWDWZsKUh7ERcf3sgWMU",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "",
+							"raw": "{\r\n  \"idCommunity\": \"66578729102162de06d4b57f\", \r\n  \"title\": \"Casa en venta\", \r\n  \"content\": \"Tenemos una casa en venta en nuestra comunidad, si desea más información comuníquese con nosotros\", \r\n  \"anonymous\": false, \r\n  \"category\": \"#housing\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "http://localhost:3000/neighbor/v1/post/updatePost/665a3d5ab1af39ec6a767506"
+						"url": "http://localhost:3000/neighbor/v1/post"
 					},
 					"response": []
 				},
@@ -273,10 +264,35 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjU3N2VjZmIxYTk0OGFjN2QyMTg5YWUiLCJlbWFpbCI6ImpvbkBhZG1pbi5vcmcuZ3QiLCJpYXQiOjE3MTcyNTg4MjksImV4cCI6MTcxNzI2NjAyOX0.-6rYQDEnFn1QvwkZ7aubQwIW6jzuqz0yc4nkmwl1AMk"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjVjOTk1NzY1MmE1ZWM4ZmQ3ODAzNjkiLCJlbWFpbCI6Im1hdGVvQGFkbWluLm9yZy5ndCIsImlhdCI6MTcxNzQyNDc5MywiZXhwIjoxNzE3NDMxOTkzfQ.-I9dXZNqYebuuH05mvWg-uXxWDWZsKUh7ERcf3sgWMU",
+								"type": "text"
 							}
 						],
-						"url": "http://localhost:3000/neighbor/v1/post/665b4f6b8c527891836b8ebb"
+						"url": "http://localhost:3000/neighbor/v1/post/665c9981652a5ec8fd780371"
+					},
+					"response": []
+				},
+				{
+					"name": "updatePost",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjVjOTk1NzY1MmE1ZWM4ZmQ3ODAzNjkiLCJlbWFpbCI6Im1hdGVvQGFkbWluLm9yZy5ndCIsImlhdCI6MTcxNzQyNDc5MywiZXhwIjoxNzE3NDMxOTkzfQ.-I9dXZNqYebuuH05mvWg-uXxWDWZsKUh7ERcf3sgWMU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"ADVERTENCIA\", \r\n  \"content\": \"PRECAUCIÓN EN LA ENTRADA PRINCIPAL\", \r\n  \"category\": \"#job\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/neighbor/v1/post/665c99e3652a5ec8fd78037b"
 					},
 					"response": []
 				}

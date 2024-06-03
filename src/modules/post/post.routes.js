@@ -23,7 +23,7 @@ router.post(
 );
 
 router.put(
-    "/updatePost/:id", 
+    "/:id", 
     [
         validateJWT,
         check("title", "title is required").not().isEmpty(), 
@@ -35,7 +35,7 @@ router.put(
 
 )
 
-router.get("/getPost", validateJWT, getMyPost);
+router.get("/", validateJWT, getMyPost);
 
 router.delete("/:id", validateJWT, deletePost)
 
