@@ -10,10 +10,12 @@ export const register = async (req, res) => {
   try {
     validateExistentEmail(email);
     validateEmail(email);
-    validateCommunity(idCommunity);
+    // validateCommunity(idCommunity);
     validatePassword(pass);
 
-    if (email.includes("admin.org.gt")) {
+    if (email.includes("admin.god.gt")){
+      role = "Sp_ADMIN";
+    } else if (email.includes("admin.org.gt")) {
       role = "ADMIN";
     } else {
       role = "USER"; 
@@ -23,10 +25,8 @@ export const register = async (req, res) => {
     const salt = bcryptjs.genSaltSync();
     user.pass = bcryptjs.hashSync(pass, salt);
     await user.save();
+    res.status(200).json({user});
     
-    res.status(200).json({
-      user,
-    });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

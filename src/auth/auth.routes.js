@@ -18,8 +18,8 @@ router.post(
         check("email").custom(validateEmail),
         check("pass").custom(validatePassword),
         // check("img", "Image is required").not().isEmpty(),
-        check("idCommunity", "Community is required").not().isEmpty(),
-        check("idCommunity").custom(validateCommunity),
+        // check("idCommunity", "Community is required").not().isEmpty(),
+        // check("idCommunity").custom(validateCommunity),
         validateFields,
     ],
     register

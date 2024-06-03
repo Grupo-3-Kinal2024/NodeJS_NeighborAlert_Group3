@@ -33,13 +33,13 @@ const userSchema = new Schema({
     },
     role: {
         type: String,
-        enum: ['ADMIN', 'USER'],
+        enum: ['Sp_ADMIN','ADMIN', 'USER'],
         default: 'USER'
     },
     idCommunity: {
         type: Schema.Types.ObjectId,
         ref: 'Community',
-        required: true
+        // required: true
     },
     status: {
         type: Boolean,
