@@ -34,7 +34,9 @@ export const createComment = async (req, res) => {
 }
 
 export const getComments = async (req, res) => {
+    console.log("Ingresa al controller")
     const { idPost } = req.params;
+    console.log("Ingresa al controller: " + idPost)
     await validateUserRequest(req, res);
     handleResponse(res, Comment.find({ status: true, idPost: idPost }));
 }

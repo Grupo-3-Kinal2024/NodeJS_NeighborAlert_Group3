@@ -8,7 +8,7 @@ import { createComment, getComments, updateComment, deleteComment } from "./comm
 const router = Router();
 
 router.post(
-    "/",
+    "/createComment",
     [
         validateJWT,
 
@@ -20,7 +20,7 @@ router.post(
     createComment
 )
 
-router.get("/getComments/:idPost", validateJWT, getComments);
+router.get("/getComment/:idPost", validateJWT, getComments);
 
 router.put(
     "/updateComment/:id",
