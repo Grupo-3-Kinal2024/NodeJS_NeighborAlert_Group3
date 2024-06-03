@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "184511d3-34b5-41c4-9bb9-554813322d33",
+		"_postman_id": "af6b61d3-6750-41d0-93f2-04d7a08a7016",
 		"name": "Neigborn",
 		"description": "**Project Overview - NeigbornAlert API**\n\n**Introduction**:  \nThis collection provides an overview of the _NeigbornAlert API_, which encompasses all entities and functionalities within the system. NeigbornAlert is a platform designed to facilitate communication and interaction among users within communities. The API supports user management, community creation, post management, comment interactions, and authentication processes.\n\n---\n\n**Best Practices for API Endpoint Design**:  \nIt's important to maintain clean and concise endpoint routes to enhance readability and maintainability of the API. Consider structuring your endpoints with a base route followed by the entity they operate on, like so:\n\n`baseRoute/entity`\n\nAvoid adding unnecessary actions or verbs to the endpoint paths, such as:\n\n`baseRoute/entity/updateEntity`\n\n`baseRoute/entity/createEntity`\n\n> These distinctions can often be handled by employing different HTTP methods (GET, POST, PUT, DELETE) to the same endpoint. Overloading the endpoint paths with additional descriptors can lead to unnecessary complexity and clutter. Keep it simple and focused on the core functionality of the endpoint. \n  \n\n---\n\n**Endpoints**:\n\n- **User**:\n    \n    - Create User: `POST /neighbor/v1/user`\n        \n    - Get Users: `GET /neighbor/v1/user`\n        \n    - Get User by ID: `GET /neighbor/v1/user/{userId}`\n        \n    - Update User: `PUT /neighbor/v1/user/{userId}`\n        \n    - Delete User: `DELETE /neighbor/v1/user/{userId}`\n        \n- **Community**:\n    \n    - Create Community: `POST /neighbor/v1/community`\n        \n    - Get Communities: `GET /neighbor/v1/community`\n        \n    - Get Community by ID: `GET /neighbor/v1/community/{communityId}`\n        \n    - Update Community: `PUT /neighbor/v1/community/{communityId}`\n        \n    - Delete Community: `DELETE /neighbor/v1/community/{communityId}`\n        \n- **Post**:\n    \n    - Create Post: `POST /neighbor/v1/post`\n        \n    - Get Posts: `GET /neighbor/v1/post`\n        \n    - Get Post by ID: `GET /neighbor/v1/post/{postId}`\n        \n    - Update Post: `PUT /neighbor/v1/post/{postId}`\n        \n    - Delete Post: `DELETE /neighbor/v1/post/{postId}`\n        \n- **Comment**:\n    \n    - Create Comment: `POST /neighbor/v1/comment`\n        \n    - Get Comments: `GET /neighbor/v1/comment`\n        \n    - Get Comment by ID: `GET /neighbor/v1/comment/{commentId}`\n        \n    - Update Comment: `PUT /neighbor/v1/comment/{commentId}`\n        \n    - Delete Comment: `DELETE /neighbor/v1/comment/{commentId}`",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
-		"_exporter_id": "32787339"
+		"_exporter_id": "32787266"
 	},
 	"item": [
 		{
@@ -306,8 +306,14 @@
 					"name": "getComment",
 					"request": {
 						"method": "GET",
-						"header": [],
-						"url": "http://127.0.0.1:3000/neighbor/v1/comment"
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjU3N2VjZmIxYTk0OGFjN2QyMTg5YWUiLCJlbWFpbCI6ImpvbkBhZG1pbi5vcmcuZ3QiLCJpYXQiOjE3MTc0MjYyNTUsImV4cCI6MTcxNzQzMzQ1NX0.Nhk8VbmhgRVCt-PdQjr8RIBEMDCWLf1O4LosWuWw5zg",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:3000/neighbor/v1/comment/getComment/665dd341fa7ec848151361ba"
 					},
 					"response": []
 				},
@@ -318,19 +324,19 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjU3N2VjZmIxYTk0OGFjN2QyMTg5YWUiLCJlbWFpbCI6ImpvbkBhZG1pbi5vcmcuZ3QiLCJpYXQiOjE3MTczNDMyODYsImV4cCI6MTcxNzM1MDQ4Nn0.Hzja_pkZHbJdn8nuu0dTeL43swWXVRKlhtOtZQ50pzY"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjU3N2VjZmIxYTk0OGFjN2QyMTg5YWUiLCJlbWFpbCI6ImpvbkBhZG1pbi5vcmcuZ3QiLCJpYXQiOjE3MTc0MzY0NjQsImV4cCI6MTcxNzQ0MzY2NH0.0WLbYuzQSnGPTqsbfyP46MIjR45KmGFk0Z6eioVs1Rw"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"idPost\":\"66577ecfb1a948ac7d2189ae\",\r\n    \"content\":\"Hola\",\r\n    \"anonymous\":false\r\n\r\n}",
+							"raw": "{\r\n    \"idPost\":\"665dda281941ecd3c5e6e881\",\r\n    \"content\":\"La seguridad vial es fundamental. Tomemos esto como una llamada de atención para conducir con responsabilidad y respetar los límites de velocidad\",\r\n    \"anonymous\":false\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "http://127.0.0.1:3000/neighbor/v1/comment"
+						"url": "http://127.0.0.1:3000/neighbor/v1/comment/createComment"
 					},
 					"response": []
 				},
@@ -341,19 +347,19 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjU3N2VjZmIxYTk0OGFjN2QyMTg5YWUiLCJlbWFpbCI6ImpvbkBhZG1pbi5vcmcuZ3QiLCJpYXQiOjE3MTcxMTk2ODMsImV4cCI6MTcxNzEyNjg4M30.1uA9AUKg_7cDh_jqbM3yApsFbbqc3mNWoFmlCSEQa7k"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjU3N2VjZmIxYTk0OGFjN2QyMTg5YWUiLCJlbWFpbCI6ImpvbkBhZG1pbi5vcmcuZ3QiLCJpYXQiOjE3MTc0MjYyNTUsImV4cCI6MTcxNzQzMzQ1NX0.Nhk8VbmhgRVCt-PdQjr8RIBEMDCWLf1O4LosWuWw5zg"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"content\":\"Esta es la nueva data xd\"\r\n}",
+							"raw": "{\r\n    \"content\":\"665dd455fa7ec848151361c4\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "http://127.0.0.1:3000/neighbor/v1/comment/updateComment/66592dec123ef0dc28b3958a"
+						"url": "http://127.0.0.1:3000/neighbor/v1/comment/updateComment/665dd455fa7ec848151361c4"
 					},
 					"response": []
 				},
@@ -364,19 +370,19 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjU3N2VjZmIxYTk0OGFjN2QyMTg5YWUiLCJlbWFpbCI6ImpvbkBhZG1pbi5vcmcuZ3QiLCJpYXQiOjE3MTcxMTk2ODMsImV4cCI6MTcxNzEyNjg4M30.1uA9AUKg_7cDh_jqbM3yApsFbbqc3mNWoFmlCSEQa7k"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjU3N2VjZmIxYTk0OGFjN2QyMTg5YWUiLCJlbWFpbCI6ImpvbkBhZG1pbi5vcmcuZ3QiLCJpYXQiOjE3MTc0MjYyNTUsImV4cCI6MTcxNzQzMzQ1NX0.Nhk8VbmhgRVCt-PdQjr8RIBEMDCWLf1O4LosWuWw5zg"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"content\":\"Esta es la nueva data xd\"\r\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "http://127.0.0.1:3000/neighbor/v1/comment/deleteComment/665933b204d0a2018f9f9cdf"
+						"url": "http://127.0.0.1:3000/neighbor/v1/comment/deleteComment/665dd455fa7ec848151361c4"
 					},
 					"response": []
 				}

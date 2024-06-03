@@ -1,0 +1,264 @@
+[{
+  "_id": {
+    "$oid": "665e00b7925540708f0ac8aa"
+  },
+  "idUser": {
+    "$oid": "66577ecfb1a948ac7d2189ae"
+  },
+  "idPost": {
+    "$oid": "665c99e3652a5ec8fd78037b"
+  },
+  "content": "¡Gracias por el aviso! La seguridad es primordial. Estaré atento y reportaré cualquier actividad sospechosa.",
+  "anonymous": false,
+  "status": true,
+  "createdAt": {
+    "$date": "2024-06-03T17:43:19.565Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-03T17:43:19.565Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e00d2925540708f0ac8af"
+  },
+  "idPost": {
+    "$oid": "665c99e3652a5ec8fd78037b"
+  },
+  "content": "Es crucial mantenernos alerta ante cualquier amenaza potencial. Juntos, podemos mantener nuestra comunidad segura.",
+  "anonymous": true,
+  "status": true,
+  "createdAt": {
+    "$date": "2024-06-03T17:43:46.443Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-03T17:43:46.443Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e00de925540708f0ac8b4"
+  },
+  "idUser": {
+    "$oid": "66577ecfb1a948ac7d2189ae"
+  },
+  "idPost": {
+    "$oid": "665c99e3652a5ec8fd78037b"
+  },
+  "content": "¡Tomaré precauciones adicionales al entrar y salir! La seguridad de todos es responsabilidad de cada uno.",
+  "anonymous": false,
+  "status": true,
+  "createdAt": {
+    "$date": "2024-06-03T17:43:58.791Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-03T17:43:58.791Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e01b7925540708f0ac8b9"
+  },
+  "idPost": {
+    "$oid": "665c99e3652a5ec8fd78037b"
+  },
+  "content": "¡Entendido! Mantendré los ojos bien abiertos. Es importante trabajar juntos para mantener nuestra entrada segura.",
+  "anonymous": true,
+  "status": true,
+  "createdAt": {
+    "$date": "2024-06-03T17:47:35.638Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-03T17:47:35.638Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e01f2925540708f0ac8be"
+  },
+  "idPost": {
+    "$oid": "665dda281941ecd3c5e6e881"
+  },
+  "content": "¡Qué terrible noticia! Espero que nadie haya resultado gravemente herido. Recordemos siempre conducir con precaución.",
+  "anonymous": true,
+  "status": true,
+  "createdAt": {
+    "$date": "2024-06-03T17:48:34.119Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-03T17:48:34.119Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e024c925540708f0ac8c3"
+  },
+  "idUser": {
+    "$oid": "66577ecfb1a948ac7d2189ae"
+  },
+  "idPost": {
+    "$oid": "665dda281941ecd3c5e6e881"
+  },
+  "content": "La seguridad vial es fundamental. Tomemos esto como una llamada de atención para conducir con responsabilidad y respetar los límites de velocidad",
+  "anonymous": false,
+  "status": true,
+  "createdAt": {
+    "$date": "2024-06-03T17:50:04.222Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-03T17:50:04.222Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e028d925540708f0ac8c8"
+  },
+  "idUser": {
+    "$oid": "66577ecfb1a948ac7d2189ae"
+  },
+  "idPost": {
+    "$oid": "665ddafe25506e719ea12490"
+  },
+  "content": "¡Es genial celebrar una década de comunidad y convivencia! Estoy emocionado por ser parte de este evento y crear más vínculos en nuestra colonia.",
+  "anonymous": false,
+  "status": true,
+  "createdAt": {
+    "$date": "2024-06-03T17:51:09.661Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-03T17:51:09.661Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e029a925540708f0ac8cd"
+  },
+  "idUser": {
+    "$oid": "66577ecfb1a948ac7d2189ae"
+  },
+  "idPost": {
+    "$oid": "665ddafe25506e719ea12490"
+  },
+  "content": "¡Qué emocionante! Espero que sea un evento lleno de alegría y recuerdos compartidos. ¡Felicidades a la colonia por estos 10 años!",
+  "anonymous": false,
+  "status": true,
+  "createdAt": {
+    "$date": "2024-06-03T17:51:22.267Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-03T17:51:22.267Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e02c3925540708f0ac8d2"
+  },
+  "idUser": {
+    "$oid": "66577ecfb1a948ac7d2189ae"
+  },
+  "idPost": {
+    "$oid": "665ddb4a25506e719ea12495"
+  },
+  "content": "¡Excelente oportunidad! ¿Tienes más detalles sobre la casa en renta? Estoy interesado en conocer más sobre esta propiedad en la 38Av.",
+  "anonymous": false,
+  "status": true,
+  "createdAt": {
+    "$date": "2024-06-03T17:52:03.620Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-03T17:52:03.620Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e02d2925540708f0ac8d7"
+  },
+  "idUser": {
+    "$oid": "66577ecfb1a948ac7d2189ae"
+  },
+  "idPost": {
+    "$oid": "665ddb4a25506e719ea12495"
+  },
+  "content": "¿Sabes si la casa en renta en la 38Av tiene alguna especificación especial? Estoy buscando una nueva vivienda y me gustaría obtener más información.",
+  "anonymous": false,
+  "status": true,
+  "createdAt": {
+    "$date": "2024-06-03T17:52:18.531Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-03T17:52:18.531Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e0308925540708f0ac8dc"
+  },
+  "idUser": {
+    "$oid": "66577ecfb1a948ac7d2189ae"
+  },
+  "idPost": {
+    "$oid": "665ddb7b25506e719ea1249a"
+  },
+  "content": "¡Qué emocionante oportunidad para involucrarse en la comunidad! Estoy interesado en ser parte de la junta directiva y contribuir al desarrollo de nuestra comunidad.",
+  "anonymous": false,
+  "status": true,
+  "createdAt": {
+    "$date": "2024-06-03T17:53:12.439Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-03T17:53:12.439Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e0313925540708f0ac8e1"
+  },
+  "idUser": {
+    "$oid": "66577ecfb1a948ac7d2189ae"
+  },
+  "idPost": {
+    "$oid": "665ddb7b25506e719ea1249a"
+  },
+  "content": "¡Es fundamental contar con una junta directiva comprometida y diversa! Estoy ansioso por participar y aportar nuevas ideas para el crecimiento de nuestra comunidad.",
+  "anonymous": false,
+  "status": true,
+  "createdAt": {
+    "$date": "2024-06-03T17:53:23.477Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-03T17:53:23.477Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e031b925540708f0ac8e6"
+  },
+  "idUser": {
+    "$oid": "66577ecfb1a948ac7d2189ae"
+  },
+  "idPost": {
+    "$oid": "665ddb7b25506e719ea1249a"
+  },
+  "content": "¡Genial saber que se está buscando gente para liderar! Estoy dispuesto a contribuir con tiempo y esfuerzo para asegurar una junta directiva sólida y representativa.",
+  "anonymous": false,
+  "status": true,
+  "createdAt": {
+    "$date": "2024-06-03T17:53:31.419Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-03T17:53:31.419Z"
+  },
+  "__v": 0
+}]
