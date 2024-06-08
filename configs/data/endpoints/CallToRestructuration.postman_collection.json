@@ -1,0 +1,51 @@
+{
+	"info": {
+		"_postman_id": "790bc563-cee0-4a81-8431-40bda0f7959d",
+		"name": "CallToRestructuration",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34539621"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Admin\",\r\n    \"lastName\": \"Admin\",\r\n    \"phone\": \"1234-5678\",\r\n    \"email\": \"jon@admin.org.gt\",\r\n    \"pass\": \"@Pass123\",\r\n    \"img\":\"Not found\",\r\n    \"idCommunity\": \"66577ad5bcea4d45b3836532\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/neighbor/v1/auth/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjU3N2VjZmIxYTk0OGFjN2QyMTg5YWUiLCJlbWFpbCI6ImpvbkBhZG1pbi5vcmcuZ3QiLCJpYXQiOjE3MTc4MjI5NTYsImV4cCI6MTcxNzgzMDE1Nn0.HZsM_YCgWL1l8AznrC26gqq3Yuyrt974AEDc63hdm4w"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"New York City\",\r\n    \"location\":\"United States\",\r\n    \"img\":\"Not found\",\r\n    \"description\":\"The best city\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/neighbor/v1/community"
+			},
+			"response": []
+		}
+	]
+}
