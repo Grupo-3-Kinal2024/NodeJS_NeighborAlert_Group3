@@ -1,32 +1,34 @@
 import bcryptjs from "bcryptjs";
 import { generateJWT } from "../helpers/generate-JWT.js";
 import User from "../modules/user/user.model.js";
-import {validateCommunity, validateExistentEmail, validateEmail, validatePassword } from "../helpers/data-methods.js";
+import { validateCommunity, validateExistentEmail, validateEmail, validatePassword } from "../helpers/data-methods.js";
 
 export const register = async (req, res) => {
-  const { name, lastName, phone, email, pass, img, idCommunity } = req.body;
+  let { name, lastName, phone, email, pass, img, codeCommunity } = req.body;
   let role;
   let user;
   try {
     validateExistentEmail(email);
     validateEmail(email);
-    // validateCommunity(idCommunity);
     validatePassword(pass);
 
-    if (email.includes("admin.god.gt")){
+    if (email.includes("admin.god.gt")) {
       role = "Sp_ADMIN";
+      codeCommunity = "GOD";
     } else if (email.includes("admin.org.gt")) {
       role = "ADMIN";
+      codeCommunity = "ADM";
     } else {
-      role = "USER"; 
+      role = "USER";
+      validateCommunity(codeCommunity)
     }
-
-    user = new User({ name, lastName, phone, email, pass, img, role, idCommunity });
+    codeCommunity = codeCommunity.toUpperCase();
+    user = new User({ name, lastName, phone, email, pass, img, role, codeCommunity });
     const salt = bcryptjs.genSaltSync();
     user.pass = bcryptjs.hashSync(pass, salt);
     await user.save();
-    res.status(200).json({user});
-    
+    res.status(200).json({ user });
+
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -34,7 +36,7 @@ export const register = async (req, res) => {
 
 export const login = async (req, res) => {
   const { email, pass } = req.body;
-  
+
   try {
     const user = await User.findOne({ email: email });
 

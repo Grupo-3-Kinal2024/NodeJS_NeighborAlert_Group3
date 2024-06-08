@@ -1,6 +1,8 @@
 import Community from './community.model.js';
 import { validateAdmin } from '../../helpers/data-methods.js';
 import { isToken } from '../../helpers/tk-methods.js';
+import uniqid from 'uniqid';
+import bycrypt from 'bcryptjs';
 
 const handleResponse = (res, promise) => {
     promise
@@ -15,16 +17,30 @@ const validateUserRequest = async (req, res) => {
     try {
         const user = await isToken(req, res);
         validateAdmin(user._id);
-        return true;    
+        return true;
     } catch (error) {
         return res.status(400).json({ error: error.message });
     }
 }
 
 export const createCommunity = async (req, res) => {
-    const { name, location, img } = req.body;
+    const { name, location, img, description } = req.body;
+    //CREATION CODE
+    var code;
+    let existence = false;
+    do {
+        code = uniqid().slice(0, 8);
+        //VERIFICATION CODE UNIQUE EXIST
+        const codeExistence = await Community.find({ code });
+        console.log(codeExistence);
+        if (codeExistence.length > 0) {
+            existence = true;
+        }
+    } while (existence);
+    //END CREATION CODE - Save
+    code = code.toUpperCase();
     await validateUserRequest(req, res);
-    handleResponse(res, Community.create({ name, location, img }));
+    handleResponse(res, Community.create({ name, location, img, description, code }));
 };
 
 export const getCommunities = async (req, res) => {

@@ -25,6 +25,7 @@
     "mongodb": "^6.6.2",
     "mongoose": "^8.4.0",
     "morgan": "^1.10.0",
+    "uniqid": "^5.4.0",
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {

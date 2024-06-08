@@ -1,4 +1,4 @@
-import {Schema, model} from 'mongoose';
+import { Schema, model } from 'mongoose';
 
 const userSchema = new Schema({
     name: {
@@ -33,13 +33,13 @@ const userSchema = new Schema({
     },
     role: {
         type: String,
-        enum: ['Sp_ADMIN','ADMIN', 'USER'],
+        enum: ['Sp_ADMIN', 'ADMIN', 'USER'],
         default: 'USER'
     },
-    idCommunity: {
-        type: Schema.Types.ObjectId,
+    codeCommunity: {
+        type: String,
         ref: 'Community',
-        // required: true
+        //required: true
     },
     status: {
         type: Boolean,

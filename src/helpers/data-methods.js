@@ -26,8 +26,8 @@ export const validateAdmin = async (id) => {
 }
 
 export const validateCommunity = async (id) => {
-    const community = await Community.findById(id);
-    if (!community) {throw new Error('Community not found')}
+    const community = await Community.findOne({code: id});
+    if (!community) {throw new Error('Community dont exists or code is incorrect')}
     if (!community.status) {throw new Error('Community is not active')}
     return community;
 }
